@@ -21,6 +21,18 @@ export const config = {
     },
     BOOKS_PRD: {
         host: 'http://localhost:3030'
+    },
+    greetings_dev: {
+        host: 'http://127.0.0.1:7001'
+    },
+    greetings_staging: {
+        host: 'http://127.0.0.1:7002'
+    },
+    greetings_preprod: {
+        host: 'http://127.0.0.1:7003'
+    },
+    greetings_prod: {
+        host: 'http://127.0.0.1:7004'
     }
 }
 

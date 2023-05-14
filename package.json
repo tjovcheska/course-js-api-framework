@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "user": "mocha 'tests/scenarios/user/*.js' --reporter mochawesome --timeout 20000 user",
-    "BOOKS": "mocha 'tests/scenarios/books/*.js' --reporter mochawesome --timeout 20000 books"
+    "BOOKS": "mocha 'tests/scenarios/books/*.js' --reporter mochawesome --timeout 20000 books",
+    "greetings": "mocha 'tests/scenarios/greetings/*.js' --reporter mochawesome --timeout 20000 greetings"
   },
   "author": "Aleksejs Levenciks",
   "license": "ISC",
