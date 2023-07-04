@@ -1,21 +1,18 @@
 pipeline {
     agent any
-    triggers { 
-        pollSCM('*/1 * * * *') 
-    }
     stages {
-        stage('build-docker-image') {
+        stage('build-and-push-docker-image') {
             steps {
-                build_docker_image()
+                build_and_push_docker_image()
             }
         }
     }
 }
 
-def build_docker_image(){
-    echo "Building docker image.."
-    sh "docker build --no-cache -t mtararujs/api-tests ."
+def build_and_push_docker_image() {
+    echo "Build the Docker image based on the Dockerfile in the repository"
+    sh 'docker build -t teodorajovcheska7/api-tests:latest .'
 
-    echo "Pushing docker image to docker registry.."
-    sh "docker push mtararujs/api-tests"
+    echo "Push the Docker image to Docker Hub"
+    sh 'docker push teodorajovcheska7/api-tests:latest'
 }
